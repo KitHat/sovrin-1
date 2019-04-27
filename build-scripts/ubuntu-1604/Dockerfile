@@ -9,7 +9,7 @@ RUN apt-get update -y && apt-get install -y \
         python3-pip \
         python-setuptools \
         python3-venv \
-    # fmp
+    # fpm
         ruby \
         ruby-dev \
         rubygems \
@@ -17,7 +17,7 @@ RUN apt-get update -y && apt-get install -y \
         make
 
 # install fpm
-RUN gem install --no-ri --no-rdoc fpm
+RUN gem install --no-ri --no-rdoc rake fpm
 
 WORKDIR /root
 
